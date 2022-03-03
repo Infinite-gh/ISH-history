@@ -10,7 +10,7 @@ module.exports = (rl) =>{
 
     fs.writeFile("./SHELL/options/NZPM/toupdate.json", JSON.stringify(installed), (err =>{
 
-        if(err) console.log("there was an error while installing this package")
+        if(err) console.log(err)
     }))
 
     return NZTK.log("finished installing history", "NZPM", "installing")
