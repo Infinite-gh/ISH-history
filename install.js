@@ -8,7 +8,7 @@ module.exports = (rl) =>{
     NZTK.removedir('./SHELL/temp/NZPM/history')
     installed.packages.push("history")
 
-    fs.writeFile("./SHELL/options/NZPM/toupdate.json", installed, (err =>{
+    fs.writeFile("./SHELL/options/NZPM/toupdate.json", JSON.stringify(installed), (err =>{
 
         if(err) console.log("there was an error while installing this package")
     }))
