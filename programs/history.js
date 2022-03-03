@@ -1,6 +1,7 @@
 module.exports = {
     name: "history",
     desc: "history of infinite shell",
+    version: "does it really matter 1.0.0?",
     usage: "history",
     run: () =>{
         
