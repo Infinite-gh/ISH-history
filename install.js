@@ -6,7 +6,7 @@ module.exports = (rl) =>{
     
     NZTK.moveFile('./SHELL/temp/NZPM/history/programs/history.js', './SHELL/programs/history.app.js', "there was an error while installing the package history", true)
     NZTK.removedir('./SHELL/temp/NZPM/history')
-    installed.push("history")
+    installed.packages.push("history")
 
     fs.writeFile("./SHELL/options/NZPM/toupdate.json", installed, (err =>{
 
