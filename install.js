@@ -1,6 +1,7 @@
-module.exports = (rl) =>{
+module.exports = (rl, user) =>{
 
-    const NZTK = require('../../../other/NZTK')
+    const NZTKc = require('../../../other/NZTK')
+    const NZTK = new NZTKc("NZPM", user)
     const fs = require('fs')
     let installed = require('../../../configs/NZPM/toupdate.json')
     
@@ -11,8 +12,8 @@ module.exports = (rl) =>{
 
     fs.writeFile("./SHELL/configs/NZPM/toupdate.json", JSON.stringify(installed), (err =>{
 
-        if(err) console.log("there was an error while installing this package")
+        if(err) NZTK.log.error(err, 2, "installing")
     }))
 
-    return NZTK.log("finished installing history", "NZPM", "installing")
+    return NZTK.log.success("finished installing history", 2, "installing")
 }
